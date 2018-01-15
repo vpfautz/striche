@@ -13,6 +13,7 @@ Now the development server listens on [http://localhost:3000](http://localhost:3
 ## Usage
 
 Just drag a line to cross some lines. AI will kick in after 100ms.
+
 ![screenshot](screenshot.png)
 
 ## Name
