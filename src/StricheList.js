@@ -95,6 +95,14 @@ class StricheList extends Component {
     });
   }
 
+  handleReplay() {
+    this.setState({
+      config: this.state.config.map(c => {return {num:c.num, crossed: []}}),
+      info: "",
+      dragEnabled: true,
+    });
+  }
+
   getNewConfig() {
     let n = Math.round(Math.random() * 4 + 2);
     let config = [];
@@ -124,7 +132,9 @@ class StricheList extends Component {
           {list}
         </div>
         {info}
-        <Button color="primary" onClick={this.handleRestart.bind(this)}>restart</Button>
+        <Button color="primary" className="margin" onClick={this.handleRestart.bind(this)}>restart</Button>
+        {" "}
+        <Button color="primary" className="margin" onClick={this.handleReplay.bind(this)}>replay</Button>
       </div>
     );
   }
